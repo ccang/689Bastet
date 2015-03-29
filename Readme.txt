@@ -13,6 +13,10 @@
 2. 如果你使用電腦下載, 將這個檔案copy到你的Android手機的SD卡
 3. 在手機中執行這個檔案. 你可能需要先到 設定 --> 應用程式 --> 未知的來源 打勾
 
+操控說明:
+1. a. 往左/右/下掃: 移動方塊; b. 點擊: 旋轉方塊; c. back或home鍵: 暫停遊戲
+2. 難度: 難度越高, 速度越快, 獲得較好方塊的機會越低
+
 系統需求:
 Android 2.3.3 (Gingerbread)或以上. 最好Android 4或以上
 最少4MB的空間
@@ -32,6 +36,14 @@ To Install:
 1. Go to the folder "App" and download the file "app-release.apk"
 2. If you saved this file to your computer, copy it to your Android phone
 3. Run this file in your phone.
+
+Controls:
+1. Swipe left/right/down: move the brick; Touch once: rotate the brick; Back or Home buttons: pause the game
+2. A higher level means not only faster speed but less chance to get even a slightly better brick.
+
+System Requirements:
+- Android 2.3.3 or higher. Best for Android 4 or higher.
+- At least 4 MB of memory space
 
 ------------------------------------------------------------------------------------------------------------------
 
