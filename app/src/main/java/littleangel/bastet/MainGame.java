@@ -29,8 +29,9 @@ public abstract class MainGame extends View {
     public static String COMBO;
     public static String END_RECORD_1;
     public static String END_RECORD_2;
-
+    // for canvas
 	Paint paint = new Paint();
+    // for exiting the game after game over
     private int exit_tap=0;
     // FOR DEBUG
     double[] DebugScore = {0,0,0,0,0,0,0};
@@ -116,7 +117,7 @@ public abstract class MainGame extends View {
 	static long highScore = 0; // The highscore of the current gamemode
     static long highScoreLimit = 0; // The lowest highscore that should be beaten
 	public static int level = 0; // The current level
-	static String lastMove = "Nothing";
+	// static String lastMove = "Nothing";
 	static int combo = 0; // The current combo
 	static double gravity = defaultGravity; // The current base gravity
 	static double gravityAdd = 0; // The amount of gravity to add onto the base
@@ -500,7 +501,7 @@ public abstract class MainGame extends View {
                             }
                         }
                         // adjust the score of the shape after this test
-                        shapeScore[shapeID] += ((-0.1) * totalTestHeight + 8000 * testClearLine + (-2) * (testHole-origHoles) + (-0.1) * testBump);
+                        shapeScore[shapeID] += ((-0.5) * totalTestHeight + 15000 * testClearLine + (-10) * (testHole-origHoles) + (-0.5) * testBump);
                         trial++;
                     } // End IF
                 } // end interation of rotations
@@ -831,7 +832,7 @@ public abstract class MainGame extends View {
 
 				// Update current Tetrimino location
 				playLocationY[xx] = playLocationY[xx] + 1;
-				lastMove = "Drop";
+				// lastMove = "Drop";
 			}
 			pivotY = pivotY + 1;
 		}
@@ -1110,7 +1111,7 @@ public abstract class MainGame extends View {
 		if (turnSuccess) {
 			slackOnce = false;
 			currentRotation = (currentRotation + 1) % 4;
-			lastMove = "Turn";
+			// lastMove = "Turn";
 		}
 	}
 
@@ -1127,7 +1128,7 @@ public abstract class MainGame extends View {
         if (turnSuccess) {
             slackOnce = false;
             currentRotation = (currentRotation + 3) % 4;
-            lastMove = "Turn";
+            // lastMove = "Turn";
         }
     }
 
@@ -1386,7 +1387,7 @@ public abstract class MainGame extends View {
         notGivenShape = -1;
         currentShape = -1;
 		score = 0;
-		lastMove = "Nothing";
+		// lastMove = "Nothing";
 		gravityTicker = 0;
 		gravityAdd = 0;
 		clearInfo.clear();

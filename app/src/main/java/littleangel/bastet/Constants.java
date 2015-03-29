@@ -71,8 +71,8 @@ public class Constants {
             {55,20,15,9,1,0,0},
             {60,20,15,5,0,0,0},
             {65,20,14,1,0,0,0},
-            {70,20,10,0,0,0,0},
-            {75,22,3,0,0,0,0}};
+            {70,23,7,0,0,0,0},
+            {75,24,1,0,0,0,0}};
     public final static String DROP_MODE_DEFAULT = GEOMETRIC_DROP_MODE;
 	public final static int SLACK_LENGTH_DEFAULT = 1000;
 	public final static int DRAG_SENSITIVITY_DEFAULT = 60;
