@@ -27,9 +27,10 @@ public class Constants {
         public final static String CURRENT_SCORE = "Score: ";
         public final static String CURRENT_LINE = "Lines: ";
         public final static String CURRENT_LEVEL = "Level: ";
-        public final static String NEXT_BLOCK = "Level-up: ";
-        public final static String COMBO = "Combo";
         public final static String REMAIN_LINE = "Remaining: ";
+        public final static String NEXT_BLOCK = "Won't give you: ";
+        public final static String COMBO = "Combo";
+
     }   // END ENGLISH
 
     // START TRAD CHINESE
@@ -64,7 +65,7 @@ public class Constants {
     // For drawing game area
     public final static double GHOST_SHAPE_MARGIN = 0.15;
     // Initializing the game settings
-    public final static double[][] LEVEL_SHAPE_PROBABILITY =
+    public final static int[][] LEVEL_SHAPE_PROBABILITY =
            {{45,20,15,10,9,1,0},
             {50,20,15,10,5,0,0},
             {55,20,15,9,1,0,0},

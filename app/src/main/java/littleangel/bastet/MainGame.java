@@ -409,7 +409,7 @@ public abstract class MainGame extends View {
         int totalTestHeight, testBump,testClearLine, testHole; // indice for evaluation of the test field
         int rotationMax; // number of maximum rotation trial for each shape's evaluation
         double[] shapeScore= {0,0,0,0,0,0,0}; // score for a particular shape. Remember (0,1,2,3,4,5,6) = (I, J, L, T, Z, S, O)
-        double[][] shapeProbability= Constants.LEVEL_SHAPE_PROBABILITY; // hard-coded probability according to sorted shapeScore.
+        int[][] shapeProbability= Constants.LEVEL_SHAPE_PROBABILITY; // hard-coded probability according to sorted shapeScore.
         int probability=(int)(Math.random()*100)+1; // a lucky draw of blocks, biased by the weight defined above
         double tmpvalue; // for bubble sort
         int tmpid;// for bubble sort
