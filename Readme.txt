@@ -8,6 +8,15 @@
 呢隻變種既俄羅斯方塊亦都一樣。你等緊一塊長條型方塊，希望一次清空4行？唔駛旨意。
 如果你想挑戰難度，689方塊絕對俾到你!
 
+安裝方法:
+1. 進入App目錄, 下載app-release.apk這個檔案
+2. 如果你使用電腦下載, 將這個檔案copy到你的Android手機的SD卡
+3. 在手機中執行這個檔案. 你可能需要先到 設定 --> 應用程式 --> 未知的來源 打勾
+
+系統需求:
+Android 2.3.3 (Gingerbread)或以上. 最好Android 4或以上
+最少4MB的空間
+
 ------------------------------------------------------------------------------------------------------------------
 
 (EN)
@@ -18,6 +27,11 @@ Just like Mr.689 who doesn't give Hong Kong residents what they really wants but
 689Bastet won't give you the brick you want most, but try to give you the brick you don't want.
 Are you waiting for a long I-brick to clear 4 lines? It won't give you!
 If you want to be frustrated and smash your phone, 689Bastet is for you!
+
+To Install:
+1. Go to the folder "App" and download the file "app-release.apk"
+2. If you saved this file to your computer, copy it to your Android phone
+3. Run this file in your phone.
 
 ------------------------------------------------------------------------------------------------------------------
 
