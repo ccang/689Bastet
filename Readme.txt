@@ -54,13 +54,25 @@ The game engine is adopted from Jetris: https://github.com/tpcstld/Jetris
 
 ------------------------------------------------------------------------------------------------------------------
 
-這個程式是一個自由軟體：您可以在遵守自由軟體基金會(Free Software Foundation)所發佈的GNU General Public License授權條款第3版或是（於您的選擇下的）任一更新版本的前提下將它重新分發及／或修改。
-This program is free software: you can redistribute it and/or modify　it under the terms of the GNU General Public License as published by　the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- 
-這個程式以開發者認為它可能有用的情況下被分發，但是＊不包含任何擔保＊；甚至不包含暗示其對於＊商業價值＊或是＊特定需求的適用性＊的保證。更多相關細節請參考GNU General Public License授權條款
-This program is distributed in the hope that it will be useful,　but WITHOUT ANY WARRANTY; without even the implied warranty of　MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.　　See the　GNU General Public License for more details.
- 
-您應該已經得到一份GNU General Public License授權條款的副本。如果沒有請上<http://www.gnu.org/licenses/>瀏覽。
-You should have received a copy of the GNU General Public License 
-along with this program. If not, see <http://www.gnu.org/licenses/>. 
-along with this program. If not, see <http://www.gnu.org/licenses/>. 
+The MIT License (MIT)
+
+Copyright (c) 2015 CCANG(LittleAngel)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
