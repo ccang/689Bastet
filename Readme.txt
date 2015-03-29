@@ -24,8 +24,8 @@ Android 2.3.3 (Gingerbread)或以上. 最好Android 4或以上
 
 This is not an ordinary version of Tetris.
 Just like Mr.689 who doesn't give Hong Kong residents what they really wants but gives them what they hate instead,
-689Bastet won't give you the brick you want most, but try to give you the brick you don't want.
-Are you waiting for a long I-brick to clear 4 lines? It won't give you!
+689Bastet doesn't give you the bricks you want most but tries to give you the bricks you don't want.
+Are you waiting for a long I-shaped brick to clear 4 lines? It won't give you!
 If you want to be frustrated and smash your phone, 689Bastet is for you!
 
 To Install:
