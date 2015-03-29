@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/title"
+        android:text="@string/app_name"
+        android:layout_marginTop="20sp"
+        android:textSize="48sp"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:textSize="26sp"
+        android:id="@+id/buttonGame"
+        android:layout_gravity="center_horizontal"
+        android:longClickable="false"
+        android:layout_below="@+id/Title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/level"
+            android:text="@string/level"
+            android:textSize="26sp"
+            android:textAlignment="center"
+            android:layout_marginRight="15dp" />
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/level_spinner"
+            android:textAlignment="center"
+            android:dropDownSelector="#ff000000" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/highscore"
+        android:textSize="26sp"
+        android:id="@+id/buttonHigh"
+        android:layout_gravity="center_horizontal"
+        android:longClickable="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/changename"
+        android:textSize="26sp"
+        android:id="@+id/buttonChangeName"
+        android:layout_gravity="center_horizontal"
+        android:longClickable="false"
+        android:layout_below="@+id/Title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/about"
+        android:textSize="26sp"
+        android:id="@+id/buttonAbout"
+        android:layout_gravity="center_horizontal"
+        android:longClickable="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

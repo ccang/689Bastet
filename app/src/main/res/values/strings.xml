@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">689方塊</string>
+    <string name="action_settings">設定</string>
+    <string name="start">開始玩</string> <!-- normally this will be overwritten by mainActivity.java -->
+    <string name="highscore">名人榜</string>
+    <string name="back">返回</string>
+    <string name="reset">重設名人榜 (請按三下)</string>
+    <string name="high_name">玩家</string>
+    <string name="high_score">分數</string>
+    <string name="high_line">行數</string>
+    <string name="level">難度</string>
+    <string name="high_title">名人榜</string>
+    <string name="changename">改名</string>
+    <string name="about">關於 689方塊</string>
+    <string name="about_description">
+        林子祥有云，數字人生。\n\n
+        整左隻新遊戲， 唔知改咩名好。見到711便利店，同埋759阿信屋，受到佢地既啟發，於是改咗呢隻遊戲個名做689方塊。\n\n
+        顧名思義，呢隻遊戲，唔係普通既俄羅斯方塊。\n\n
+        香港人好想要既野，香港人既689死都唔俾； 但香港人唔想要既野，香港人既689就俾到足。\n\n
+        呢隻變種既俄羅斯方塊亦都一樣。你等緊一塊長條型方塊，希望一次清空4行？唔駛旨意。\n\n
+        如果你想挑戰難度，689方塊絕對俾到你!\n\n
+        Ver. 0.3 © 2015 LittleAngel\n
+    </string>
+    <string-array name="level_spinner">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+</resources>

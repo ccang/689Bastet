@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dip"
+    android:weightSum="1">
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/high_title"
+        android:text="@string/about"
+        android:layout_marginTop="15sp"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        />
+
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:id="@+id/hiscore3l"
+            android:text="@string/about_description"
+            android:layout_marginTop="20sp"
+            android:textSize="12sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+    <!-- Back buttons -->
+     <Button
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:textSize="24sp"
+        android:id="@+id/about_back"
+        android:layout_gravity="center_horizontal"
+        android:longClickable="false"
+        android:layout_below="@+id/Title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+</LinearLayout>

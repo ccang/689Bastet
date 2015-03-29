@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <color name="orange">#FFFFA500</color>
+ <color name="white">#FFFFFFFF</color>
+ <color name="transparent">#00000000</color>
+ <color name="date_color">#FF999999</color>
+ <color name="black">#FF000000</color>
+ <color name="gray">#FF999999</color>
+ <color name="blue">#FF0066cc</color>
+ <color name="gold">#FFe6b121</color>
+ <color name="blueback">#FF99FFFF</color>
+ <color name="articlecolor">#FF3399FF</color>
+ <color name="article_title">#FF3399FF</color>
+ <color name="cachecolor">#FF8ad0e8</color>
+</resources>
