@@ -412,8 +412,8 @@ public abstract class MainGame extends View {
         double[] shapeScore= {0,0,0,0,0,0,0}; // score for a particular shape. Remember (0,1,2,3,4,5,6) = (I, J, L, T, Z, S, O)
         int[][] shapeProbability= Constants.LEVEL_SHAPE_PROBABILITY; // hard-coded probability according to sorted shapeScore.
         int probability=(int)(Math.random()*100)+1; // a lucky draw of blocks, biased by the weight defined above
-        double tmpvalue; // for bubble sort
-        int tmpid;// for bubble sort
+        double tmpvalue; // for insertion sort
+        int tmpid;// for insertion sort
         int[] shape_id = {0,1,2,3,4,5,6}; // for matching the shapeProbability
         int trial=0; // number of trial falling of blocks in the test field
 

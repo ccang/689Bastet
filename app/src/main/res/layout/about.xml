@@ -14,7 +14,7 @@
         android:id="@+id/high_title"
         android:text="@string/about"
         android:layout_marginTop="15sp"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textAlignment="center"
         />
 
