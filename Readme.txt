@@ -1,4 +1,4 @@
-(ZH_HK)
+﻿(ZH_HK)
 689方塊 - 會玩到你好激氣既俄羅斯方塊
 
 林子祥有云，數字人生。
@@ -50,7 +50,7 @@ System Requirements:
 ACKNOWLEDGEMENT:
 689Bastet is a clone of Bastet for Android.
 The original flash version is here: http://blahg.res0l.net/2009/01/bastet-bastard-tetris/
-The game engine is adopted from Jetris: https://github.com/tpcstld/Jetris
+The game engine of the standard Tetris portion is adopted from Jetris: https://github.com/tpcstld/Jetris
 
 ------------------------------------------------------------------------------------------------------------------
 
