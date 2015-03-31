@@ -14,25 +14,30 @@
         android:id="@+id/high_title"
         android:text="@string/about"
         android:layout_marginTop="15sp"
-        android:textSize="28sp"
+        android:textSize="30sp"
         android:textAlignment="center"
         />
 
      <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:maxLines="15"
             android:layout_gravity="start"
-            android:id="@+id/hiscore3l"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"
+            android:id="@+id/about_text"
             android:text="@string/about_description"
             android:layout_marginTop="20sp"
-            android:textSize="12sp"
+            android:textSize="15sp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:textColor="@android:color/secondary_text_dark_nodisable"
             />
 
     <!-- Back buttons -->
      <Button
-        android:layout_width="260dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="@string/back"
         android:textSize="24sp"
@@ -41,5 +46,5 @@
         android:longClickable="false"
         android:layout_below="@+id/Title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="20dp"/>
 </LinearLayout>

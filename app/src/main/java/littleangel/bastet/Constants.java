@@ -18,18 +18,21 @@ public class Constants {
         public final static String DIALOG_MESSAGE = "Please enter your name";
         public final static String DIALOG_SAVE = "Save";
         // Text displayed when clearing 1-4 lines
-        public final static String singleText = "Single";
-        public final static String doubleText = "Double";
-        public final static String tripleText = "Triple";
-        public final static String tetrisText = "Tetris";
+        public final static String SINGLE_TEXT = "Single";
+        public final static String DOUBLE_TEXT = "Double";
+        public final static String TRIPLE_TEXT = "Triple";
+        public final static String TETRIS_TEXT = "Tetris";
         // Text displayed on right
         public final static String RECORD_HIGH = "High: ";
         public final static String CURRENT_SCORE = "Score: ";
         public final static String CURRENT_LINE = "Lines: ";
         public final static String CURRENT_LEVEL = "Level: ";
-        public final static String REMAIN_LINE = "Remaining: ";
-        public final static String NEXT_BLOCK = "Won't give you: ";
+        public final static String REMAIN_LINE = "LevelUp: ";
+        public final static String NEXT_BLOCK = "Won't give: ";
         public final static String COMBO = "Combo";
+        // ENDGAME
+        public final static String END_RECORD_1 = "New";
+        public final static String END_RECORD_2 = "Record!";
 
     }   // END ENGLISH
 
@@ -42,10 +45,10 @@ public class Constants {
        public final static String DIALOG_MESSAGE = "請輸入你的名字";
        public final static String DIALOG_SAVE = "儲存";
        // Text displayed when clearing 1-4 lines
-       public final static String singleText = "消去1行";
-       public final static String doubleText = "消去2行";
-       public final static String tripleText = "消去3行";
-       public final static String tetrisText = "消去4行";
+       public final static String SINGLE_TEXT = "消去1行";
+       public final static String DOUBLE_TEXT = "消去2行";
+       public final static String TRIPLE_TEXT = "消去3行";
+       public final static String TETRIS_TEXT = "消去4行";
        // Text displayed on right
        public final static String RECORD_HIGH = "紀錄: ";
        public final static String CURRENT_SCORE = "分數: ";
@@ -62,6 +65,8 @@ public class Constants {
 
     // Main screen setting the spinner
     public final static String DEFAULT_START_LEVEL = "5";
+    // Highscore screen
+    public final static String DEFAULT_HIGHSCORE_NAME="banghead";
     // For drawing game area
     public final static double GHOST_SHAPE_MARGIN = 0.15;
     // Initializing the game settings
@@ -76,7 +81,7 @@ public class Constants {
     public final static String DROP_MODE_DEFAULT = GEOMETRIC_DROP_MODE;
 	public final static int SLACK_LENGTH_DEFAULT = 1000;
 	public final static int DRAG_SENSITIVITY_DEFAULT = 60;
-	public final static int LINES_PER_LEVEL_DEFAULT = 9;
+	public final static int LINES_PER_LEVEL_DEFAULT = 7;
 	public final static double DEFAULT_GRAVITY_DEFAULT = 0.033;
 	public final static double SOFT_DROP_SPEED_DEFAULT = 1.1;
 	public final static double GRAVITY_ADD_PER_LEVEL_DEFAULT = 0.025;

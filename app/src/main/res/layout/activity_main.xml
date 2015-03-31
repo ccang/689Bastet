@@ -16,7 +16,7 @@
         />
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="@string/start"
         android:textSize="26sp"
@@ -57,7 +57,7 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="@string/highscore"
         android:textSize="26sp"
@@ -67,7 +67,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
     <Button
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="@string/changename"
         android:textSize="26sp"
@@ -79,7 +79,7 @@
         android:layout_marginTop="20dp"/>
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="@string/about"
         android:textSize="26sp"

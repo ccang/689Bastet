@@ -2,6 +2,7 @@ package littleangel.bastet;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 import android.app.Activity;
 import android.content.Context;
@@ -35,7 +36,7 @@ public abstract class MainGame extends View {
     private int exit_tap=0;
     // FOR DEBUG
     double[] DebugScore = {0,0,0,0,0,0,0};
-    int debugprobability;
+    int debugprobability=0;
 
     // INTERNAL OPTIONS:
     static final int numSquaresX = 16; // Total number of columns
@@ -216,14 +217,14 @@ public abstract class MainGame extends View {
 
         // Output the DEBUG information
         // (0,1,2,3,4,5,6) = (I, J, L, T, Z, S, O)
-        paint.setTextSize((float) (squareSide * textScaleSize*0.7));
+        paint.setTextSize((float) (squareSide * textScaleSize*0.6));
         NumberFormat nf = NumberFormat.getInstance();
         nf.setMaximumFractionDigits(0);
         canvas.drawText("I" + nf.format(DebugScore[0]) + "; J" + nf.format(DebugScore[1]) +
                         "; L" + nf.format(DebugScore[2]) + "; T" + nf.format(DebugScore[3]) +
-                        "; Z" + nf.format(DebugScore[4]) + "; S" + nf.format(DebugScore[5]) + "; O" + nf.format(DebugScore[6]),
+                        "; Z" + nf.format(DebugScore[4]) + "; S" + nf.format(DebugScore[5]) +
+                        "; O" + nf.format(DebugScore[6]) + "; P" + debugprobability,
                 mainFieldShiftX, (numberOfBlocksLength-1)*squareSide+ mainFieldShiftY , paint);
-        canvas.drawText("P"+debugprobability, auxBoxXStarting + mainFieldShiftX, (numberOfBlocksLength)*squareSide, paint);
         paint.setTextSize((float) (squareSide * textScaleSize));
 
 		tick();
@@ -336,6 +337,7 @@ public abstract class MainGame extends View {
 	public void getSettings() {
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
 		onGetSettings(settings);
+        getLanguageConst();
 		if (startNewGame) {
 			getScreenSize = true;
 		}
@@ -501,7 +503,7 @@ public abstract class MainGame extends View {
                             }
                         }
                         // adjust the score of the shape after this test
-                        shapeScore[shapeID] += ((-0.5) * totalTestHeight + 15000 * testClearLine + (-10) * (testHole-origHoles) + (-0.5) * testBump);
+                        shapeScore[shapeID] += ((-0.5) * totalTestHeight + 50000 * testClearLine + (-10) * (testHole-origHoles) + (-0.5) * testBump);
                         trial++;
                     } // End IF
                 } // end interation of rotations
@@ -1345,11 +1347,27 @@ public abstract class MainGame extends View {
 	}
 
     public void getLanguageConst() {
-        if (true) { // now only ZH_HK availble. Future: extend this to EN or even ZH_CN
-            singleText = Constants.ZH_HK.singleText;
-            doubleText = Constants.ZH_HK.doubleText;
-            tripleText = Constants.ZH_HK.tripleText;
-            tetrisText = Constants.ZH_HK.tetrisText;
+        String currentLocale = getResources().getConfiguration().locale.toString();
+
+        if (!currentLocale.startsWith("zh"))  { // language other than Chinese
+            singleText = Constants.EN.SINGLE_TEXT;
+            doubleText = Constants.EN.DOUBLE_TEXT;
+            tripleText = Constants.EN.TRIPLE_TEXT;
+            tetrisText = Constants.EN.TETRIS_TEXT;
+            RECORD_HIGH = Constants.EN.RECORD_HIGH;
+            CURRENT_SCORE = Constants.EN.CURRENT_SCORE;
+            CURRENT_LINE = Constants.EN.CURRENT_LINE;
+            CURRENT_LEVEL = Constants.EN.CURRENT_LEVEL;
+            REMAIN_LINE = Constants.EN.REMAIN_LINE;
+            NEXT_BLOCK = Constants.EN.NEXT_BLOCK;
+            COMBO = Constants.EN.COMBO;
+            END_RECORD_1 = Constants.EN.END_RECORD_1;
+            END_RECORD_2 = Constants.EN.END_RECORD_2;
+        } else { // currently, force all varieties of chinese to display ZH_HK resources
+            singleText = Constants.ZH_HK.SINGLE_TEXT;
+            doubleText = Constants.ZH_HK.DOUBLE_TEXT;
+            tripleText = Constants.ZH_HK.TRIPLE_TEXT;
+            tetrisText = Constants.ZH_HK.TETRIS_TEXT;
             RECORD_HIGH = Constants.ZH_HK.RECORD_HIGH;
             CURRENT_SCORE = Constants.ZH_HK.CURRENT_SCORE;
             CURRENT_LINE = Constants.ZH_HK.CURRENT_LINE;
@@ -1366,7 +1384,6 @@ public abstract class MainGame extends View {
 		if (!startNewGame) {
 			updateHighScore();
 		}
-        getLanguageConst();
 		getSettings();
 		// Reset Variables
 		for (int xx = 0; xx < numberOfBlocksWidth; xx++) {

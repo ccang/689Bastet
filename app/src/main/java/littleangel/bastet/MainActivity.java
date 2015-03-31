@@ -9,6 +9,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.app.Activity;
 import android.preference.PreferenceManager;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -34,6 +35,7 @@ public class MainActivity extends Activity {
     public Button buttonGame, buttonHigh, buttonChangeName, buttonAbout;
     public Button high_back, high_reset;
     public int tap_reset_count;
+    public TextView aboutText;
     public TextView[] hiscorevText = new TextView[3];
     public TextView[] hiscorenText = new TextView[3];
     public TextView[] hiscorelText = new TextView[3];
@@ -46,7 +48,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         settings = PreferenceManager.getDefaultSharedPreferences(this);
         // get the language
-        if (true) { // now only ZH_HK availble. Future: extend this to EN or even ZH_CN
+        String currentLocale = getResources().getConfiguration().locale.toString();
+        if (!currentLocale.startsWith("zh")) { // language other than Chinese
+            NEW_GAME = Constants.EN.NEW_GAME;
+            LOAD_GAME = Constants.EN.LOAD_GAME;
+            DIALOG_MESSAGE = Constants.EN.DIALOG_MESSAGE;
+            DIALOG_SAVE = Constants.EN.DIALOG_SAVE;
+        } else { // currently, force all varieties of chinese to display ZH_HK resources
             NEW_GAME = Constants.ZH_HK.NEW_GAME;
             LOAD_GAME = Constants.ZH_HK.LOAD_GAME;
             DIALOG_MESSAGE = Constants.ZH_HK.DIALOG_MESSAGE;
@@ -210,6 +218,9 @@ public class MainActivity extends Activity {
     public void jumpToLayoutAbout() {
         setContentView(R.layout.about);
         high_back = (Button) findViewById(R.id.about_back);
+        aboutText = (TextView)findViewById(R.id.about_text);
+        //  Setup the scrollbar
+        aboutText.setMovementMethod(ScrollingMovementMethod.getInstance());
         // Setup the event handler for the back button
         high_back.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View view) {
@@ -234,15 +245,15 @@ public class MainActivity extends Activity {
                 } else { // reset highscore
                     // Write to the shared preferences
                     SharedPreferences.Editor editor = settings.edit();
-                    editor.putString("HISCORE1V", "20");
-                    editor.putString("HISCORE2V", "10");
+                    editor.putString("HISCORE1V", "0");
+                    editor.putString("HISCORE2V", "0");
                     editor.putString("HISCORE3V", "0");
                     editor.putString("HISCORE1L", "0");
                     editor.putString("HISCORE2L", "0");
                     editor.putString("HISCORE3L", "0");
-                    editor.putString("HISCORE1N", "banghead");
-                    editor.putString("HISCORE2N", "banghead");
-                    editor.putString("HISCORE3N", "banghead");
+                    editor.putString("HISCORE1N", Constants.DEFAULT_HIGHSCORE_NAME);
+                    editor.putString("HISCORE2N", Constants.DEFAULT_HIGHSCORE_NAME);
+                    editor.putString("HISCORE3N", Constants.DEFAULT_HIGHSCORE_NAME);
                     editor.commit();
                     tap_reset_count=0;
                     // Re-print the highscores
@@ -274,15 +285,15 @@ public class MainActivity extends Activity {
         String hiscorev[] = new String[3];
         String hiscorel[] = new String[3];
         // load the detail highscore table
-        hiscorev[0] = settings.getString("HISCORE1V", "");
-        hiscorev[1] = settings.getString("HISCORE2V", "");
-        hiscorev[2] = settings.getString("HISCORE3V", "");
-        hiscorel[0] = settings.getString("HISCORE1L", "");
-        hiscorel[1] = settings.getString("HISCORE2L", "");
-        hiscorel[2] = settings.getString( "HISCORE3L", "");
-        hiscoren[0] = settings.getString("HISCORE1N", "");
-        hiscoren[1] = settings.getString("HISCORE2N", "");
-        hiscoren[2] = settings.getString("HISCORE3N", "");
+        hiscorev[0] = settings.getString("HISCORE1V", "0");
+        hiscorev[1] = settings.getString("HISCORE2V", "0");
+        hiscorev[2] = settings.getString("HISCORE3V", "0");
+        hiscorel[0] = settings.getString("HISCORE1L", "0");
+        hiscorel[1] = settings.getString("HISCORE2L", "0");
+        hiscorel[2] = settings.getString( "HISCORE3L", "0");
+        hiscoren[0] = settings.getString("HISCORE1N", Constants.DEFAULT_HIGHSCORE_NAME);
+        hiscoren[1] = settings.getString("HISCORE2N", Constants.DEFAULT_HIGHSCORE_NAME);
+        hiscoren[2] = settings.getString("HISCORE3N", Constants.DEFAULT_HIGHSCORE_NAME);
         // Print out the highscores
         for (int i=0; i<3; i++) {
             hiscorevText[i].setText(hiscorev[i]);

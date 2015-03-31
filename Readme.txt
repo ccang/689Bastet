@@ -15,7 +15,10 @@
 3. 在手機中執行這個檔案。 你可能需要先到 設定 --> 應用程式 --> 未知的來源 打勾。
 
 說明：
-操控： (1)往左/右/下掃：移動方塊； (2)點擊：旋轉方塊； (3)back或home鍵：暫停遊戲
+操控：
+  (1)往左/右/下掃：移動方塊；
+  (2)點擊：旋轉方塊；
+  (3)back或home鍵：暫停遊戲
 難度： 難度越高，速度會越快，獲得較好方塊的機會也越低。
 
 系統需求:
@@ -39,7 +42,10 @@ To Install:
 3. Run this file in your phone.
 
 How to play:
-Controls: (1) Flick left/right/down: move the brick; (2) Touch once: rotate the brick; (3) Back or Home buttons: pause the game
+Controls:
+  (1) Flick left/right/down: move the brick;
+  (2) Touch once: rotate the brick;
+  (3) Back or Home buttons: pause the game.
 Difficulty: A higher level means not only faster speed but less chance to get even a slightly better brick.
 
 System Requirements:
@@ -60,6 +66,7 @@ Version 0.1 25/3/2015 Basic feature completed, alpha testing
 Version 0.2 27/3/2015 Improved UI
 Version 0.3 28/3/2015 Major bug fix in block selection engine, first public Beta release
 Version 0.32 30/3/2015 Minor change in description
+Version 0.4 31/3/2015 Minor change in UI, implemented internationalization (get settings from device)
 
 ------------------------------------------------------------------------------------------------------------
 
