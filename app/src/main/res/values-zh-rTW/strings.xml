@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">689方塊</string>
+    <string name="action_settings">設定</string>
+    <string name="start">開始玩</string> <!-- normally this will be overwritten by mainActivity.java -->
+    <string name="highscore">名人榜</string>
+    <string name="back">返回</string>
+    <string name="reset">重設名人榜 (請按三下)</string>
+    <string name="high_name">玩家</string>
+    <string name="high_score">分數</string>
+    <string name="high_line">行數</string>
+    <string name="level">難度</string>
+    <string name="high_title">名人榜</string>
+    <string name="changename">改名</string>
+    <string name="about">說明</string>
+    <string name="about_description">
+        呢隻遊戲，唔係普通既俄羅斯方塊。\n\n
+        就好似香港人好想要既野，香港人既689死都唔俾；但香港人唔想要既野，香港人既689就俾到足。\n\n
+        呢隻變種既俄羅斯方塊亦都一樣。佢會估你需要既方塊，然後拒絕俾你。\n\n
+        你等緊一塊長條型方塊，希望一次清空4行？唔駛旨意！\n\n
+        說明:\n\n
+操控：\n  (1)往左/右/下掃：移動方塊；\n  (2)點擊：旋轉方塊；\n  (3)back或home鍵：暫停遊戲\n\n
+難度： 難度越高，速度會越快，獲得較好方塊的機會也越低。\n\n
+        Ver. 0.32 © 2015 LittleAngel\n
+    </string>
+    <string-array name="level_spinner">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+</resources>
