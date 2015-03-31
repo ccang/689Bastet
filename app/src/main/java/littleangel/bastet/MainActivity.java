@@ -244,17 +244,7 @@ public class MainActivity extends Activity {
                     tap_reset_count++;
                 } else { // reset highscore
                     // Write to the shared preferences
-                    SharedPreferences.Editor editor = settings.edit();
-                    editor.putString("HISCORE1V", "0");
-                    editor.putString("HISCORE2V", "0");
-                    editor.putString("HISCORE3V", "0");
-                    editor.putString("HISCORE1L", "0");
-                    editor.putString("HISCORE2L", "0");
-                    editor.putString("HISCORE3L", "0");
-                    editor.putString("HISCORE1N", Constants.DEFAULT_HIGHSCORE_NAME);
-                    editor.putString("HISCORE2N", Constants.DEFAULT_HIGHSCORE_NAME);
-                    editor.putString("HISCORE3N", Constants.DEFAULT_HIGHSCORE_NAME);
-                    editor.commit();
+                    resetHighScore();
                     tap_reset_count=0;
                     // Re-print the highscores
                     showHighScore();
@@ -267,6 +257,20 @@ public class MainActivity extends Activity {
                 jumpToLayoutMain();
             }
         });
+    }
+
+    private void resetHighScore() {
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("HISCORE1V", "0");
+        editor.putString("HISCORE2V", "0");
+        editor.putString("HISCORE3V", "0");
+        editor.putString("HISCORE1L", "0");
+        editor.putString("HISCORE2L", "0");
+        editor.putString("HISCORE3L", "0");
+        editor.putString("HISCORE1N", Constants.DEFAULT_HIGHSCORE_NAME);
+        editor.putString("HISCORE2N", Constants.DEFAULT_HIGHSCORE_NAME);
+        editor.putString("HISCORE3N", Constants.DEFAULT_HIGHSCORE_NAME);
+        editor.commit();
     }
 
     private void showHighScore() {
@@ -291,9 +295,30 @@ public class MainActivity extends Activity {
         hiscorel[0] = settings.getString("HISCORE1L", "0");
         hiscorel[1] = settings.getString("HISCORE2L", "0");
         hiscorel[2] = settings.getString( "HISCORE3L", "0");
-        hiscoren[0] = settings.getString("HISCORE1N", Constants.DEFAULT_HIGHSCORE_NAME);
-        hiscoren[1] = settings.getString("HISCORE2N", Constants.DEFAULT_HIGHSCORE_NAME);
-        hiscoren[2] = settings.getString("HISCORE3N", Constants.DEFAULT_HIGHSCORE_NAME);
+        hiscoren[0] = settings.getString("HISCORE1N", "");
+        hiscoren[1] = settings.getString("HISCORE2N", "");
+        hiscoren[2] = settings.getString("HISCORE3N", "");
+        for (int i=0; i<3; i++) {
+            // if a particular highscore record is empty
+            if (hiscoren[0].equals("")) {
+                hiscoren[0] = Constants.DEFAULT_HIGHSCORE_NAME;
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("HISCORE1N", hiscoren[0]);
+                editor.commit();
+            }
+            if (hiscoren[1].equals("")) {
+                hiscoren[1] = Constants.DEFAULT_HIGHSCORE_NAME;
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("HISCORE2N", hiscoren[1]);
+                editor.commit();
+            }
+            if (hiscoren[2].equals("")) {
+                hiscoren[2] = Constants.DEFAULT_HIGHSCORE_NAME;
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("HISCORE3N", hiscoren[2]);
+                editor.commit();
+            }
+        }
         // Print out the highscores
         for (int i=0; i<3; i++) {
             hiscorevText[i].setText(hiscorev[i]);
